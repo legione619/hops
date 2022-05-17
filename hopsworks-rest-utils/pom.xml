@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ This file is part of Hopsworks
+  ~ Copyright (C) 2018, Logical Clocks AB. All rights reserved
+  ~
+  ~ Hopsworks is free software: you can redistribute it and/or modify it under the terms of
+  ~ the GNU Affero General Public License as published by the Free Software Foundation,
+  ~ either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Hopsworks is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+  ~ PURPOSE.  See the GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License along with this program.
+  ~ If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>hopsworks</artifactId>
+    <groupId>io.hops</groupId>
+    <version>2.5.0</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>io.hops.hopsworks</groupId>
+  <artifactId>hopsworks-rest-utils</artifactId>
+  <version>2.5.0</version>
+  <description>Hopsworks REST Utils</description>
+  <name>hopsworks-rest-utils</name>
+
+  <properties>
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-web-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.hops</groupId>
+      <artifactId>hadoop-client-api</artifactId>
+    </dependency>
+  </dependencies>
+</project>

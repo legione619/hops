@@ -1,0 +1,7 @@
+name: theenv
+channels:
+  - defaults
+dependencies:
+  - dropbox=11.14.0
+prefix: /srv/hops/anaconda/envs/theenv
+

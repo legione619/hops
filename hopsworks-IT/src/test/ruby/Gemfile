@@ -1,0 +1,29 @@
+# frozen_string_literal: true
+# A sample Gemfile
+source "https://rubygems.org"
+
+gem "rspec", "3.4.0"
+gem 'hops-airborne', '0.2.17'
+gem 'safe_attributes'
+gem 'activerecord', '6.0.3.3'
+gem 'mysql2', '0.5.3'
+gem 'net-ssh', '~> 5.2.0'
+gem 'session', '3.2.0'
+gem 'coderay', '1.1.1'
+gem 'rspec_junit_formatter'
+gem 'file-tail'
+gem 'jwt', '2.2.1'
+gem 'composite_primary_keys', '=12.0.2'
+gem 'typhoeus'
+gem 'concurrent-ruby', require: 'concurrent'
+gem 'websocket-client-simple'
+group :development do
+  gem 'dotenv'
+  gem 'byebug'
+end
+
+# gem "factory_girl", "~> 4"
+# gem 'activerecord', '4.2.6', platform: :ruby
+# gem 'activerecord-jdbc-adapter', '~> 1.3', platform: :jruby
+# gem 'mysql2', '0.4.4', platform: :ruby
+# gem 'jdbc-mysql', '~> 5.1', platform: :jruby

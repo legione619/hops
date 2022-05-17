@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Changes to this file committed after and not including commit-id: ccc0d2c5f9a5ac661e60e6eaf138de7889928b8b
+  ~ are released under the following license:
+  ~
+  ~ This file is part of Hopsworks
+  ~ Copyright (C) 2018, Logical Clocks AB. All rights reserved
+  ~
+  ~ Hopsworks is free software: you can redistribute it and/or modify it under the terms of
+  ~ the GNU Affero General Public License as published by the Free Software Foundation,
+  ~ either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Hopsworks is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+  ~ PURPOSE.  See the GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License along with this program.
+  ~ If not, see <https://www.gnu.org/licenses/>.
+  ~
+  ~ Changes to this file committed before and including commit-id: ccc0d2c5f9a5ac661e60e6eaf138de7889928b8b
+  ~ are released under the following license:
+  ~
+  ~ Copyright (C) 2013 - 2018, Logical Clocks AB and RISE SICS AB. All rights reserved
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of this
+  ~ software and associated documentation files (the "Software"), to deal in the Software
+  ~ without restriction, including without limitation the rights to use, copy, modify, merge,
+  ~ publish, distribute, sublicense, and/or sell copies of the Software, and to permit
+  ~ persons to whom the Software is furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all copies or
+  ~ substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS  OR IMPLIED, INCLUDING
+  ~ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+  ~ NONINFRINGEMENT. IN NO EVENT SHALL  THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+  ~ DAMAGES OR  OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="kthfsPU" transaction-type="JTA">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <jta-data-source>jdbc/hopsworks</jta-data-source>
+    <class>io.hops.hopsworks.persistence.entity.airflow.MaterializedJWT</class>
+    <class>io.hops.hopsworks.persistence.entity.certificates.UserCerts</class>
+    <class>io.hops.hopsworks.persistence.entity.command.SystemCommand</class>
+    <class>io.hops.hopsworks.persistence.entity.command.SystemCommandArguments</class>
+    <class>io.hops.hopsworks.persistence.entity.dataset.Dataset</class>
+    <class>io.hops.hopsworks.persistence.entity.dataset.DatasetSharedWith</class>
+    <class>io.hops.hopsworks.persistence.entity.dataset.DatasetRequest</class>
+    <class>io.hops.hopsworks.persistence.entity.dela.certs.ClusterCertificate</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.Featurestore</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.activity.FeaturestoreActivity</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.tag.TagSchemas</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.ondemand.OnDemandFeature</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.ondemand.OnDemandOption</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.storageconnector.FeaturestoreConnector</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.storageconnector.jdbc.FeaturestoreJdbcConnector</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.storageconnector.redshift.FeatureStoreRedshiftConnector</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.storageconnector.s3.FeaturestoreS3Connector</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.storageconnector.hopsfs.FeaturestoreHopsfsConnector</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.storageconnector.adls.FeaturestoreADLSConnector</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.storageconnector.snowflake.FeaturestoreSnowflakeConnector</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.Featuregroup</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.ondemand.OnDemandFeaturegroup</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.cached.CachedFeaturegroup</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.cached.FeatureGroupCommit</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.cached.CachedFeatureExtraConstraints</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.cached.CachedFeature</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.trainingdataset.hopsfs.HopsfsTrainingDataset</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.trainingdataset.external.ExternalTrainingDataset</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.trainingdataset.TrainingDataset</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.trainingdataset.TrainingDatasetFeature</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.trainingdataset.TrainingDatasetJoin</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.trainingdataset.TrainingDatasetJoinCondition</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.trainingdataset.TrainingDatasetFilter</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.trainingdataset.TrainingDatasetFilterCondition</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.trainingdataset.split.TrainingDatasetSplit</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.statistics.StatisticsConfig</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.statistics.StatisticColumn</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.statistics.FeaturestoreStatistic</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.code.FeaturestoreCode</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.datavalidation.ValidationRule</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.datavalidation.FeatureStoreExpectation</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.datavalidation.FeatureGroupExpectation</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.datavalidation.FeatureGroupValidation</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.transformationFunction.TransformationFunction</class>
+    <class>io.hops.hopsworks.persistence.entity.hdfs.HdfsDirectoryWithQuotaFeature</class>
+    <class>io.hops.hopsworks.persistence.entity.hdfs.HdfsLeDescriptors</class>
+    <class>io.hops.hopsworks.persistence.entity.hdfs.user.HdfsGroups</class>
+    <class>io.hops.hopsworks.persistence.entity.hdfs.user.HdfsUsers</class>
+    <class>io.hops.hopsworks.persistence.entity.hdfs.inode.Inode</class>
+    <class>io.hops.hopsworks.persistence.entity.hdfs.inode.InodeOps</class>
+    <class>io.hops.hopsworks.persistence.entity.host.Hosts</class>
+    <class>io.hops.hopsworks.persistence.entity.jobs.history.Execution</class>
+    <class>io.hops.hopsworks.persistence.entity.jobs.history.YarnApplicationattemptstate</class>
+    <class>io.hops.hopsworks.persistence.entity.jobs.history.YarnApplicationstate</class>
+    <class>io.hops.hopsworks.persistence.entity.jobs.FilesToRemove</class>
+    <class>io.hops.hopsworks.persistence.entity.jobs.quota.YarnPriceMultiplicator</class>
+    <class>io.hops.hopsworks.persistence.entity.jobs.quota.YarnProjectsDailyCost</class>
+    <class>io.hops.hopsworks.persistence.entity.jobs.quota.YarnProjectsQuota</class>
+    <class>io.hops.hopsworks.persistence.entity.jobs.description.Jobs</class>
+    <class>io.hops.hopsworks.persistence.entity.jupyter.JupyterProject</class>
+    <class>io.hops.hopsworks.persistence.entity.jupyter.JupyterSettings</class>
+    <class>io.hops.hopsworks.persistence.entity.jupyter.config.GitConfig</class>
+    <class>io.hops.hopsworks.persistence.entity.jwt.InvalidJwt</class>
+    <class>io.hops.hopsworks.persistence.entity.jwt.JwtSigningKey</class>
+    <class>io.hops.hopsworks.persistence.entity.kafka.ProjectTopics</class>
+    <class>io.hops.hopsworks.persistence.entity.kafka.schemas.Subjects</class>
+    <class>io.hops.hopsworks.persistence.entity.kafka.schemas.SubjectsCompatibility</class>
+    <class>io.hops.hopsworks.persistence.entity.kafka.schemas.Schemas</class>
+    <class>io.hops.hopsworks.persistence.entity.kafka.SharedTopics</class>
+    <class>io.hops.hopsworks.persistence.entity.kafka.TopicAcls</class>
+    <class>io.hops.hopsworks.persistence.entity.kagent.HostServices</class>
+    <class>io.hops.hopsworks.persistence.entity.log.operation.OperationsLog</class>
+    <class>io.hops.hopsworks.persistence.entity.maggy.MaggyDriver</class>
+    <class>io.hops.hopsworks.persistence.entity.message.Message</class>
+    <class>io.hops.hopsworks.persistence.entity.project.Project</class>
+    <class>io.hops.hopsworks.persistence.entity.project.service.ProjectServices</class>
+    <class>io.hops.hopsworks.persistence.entity.project.team.ProjectTeam</class>
+    <class>io.hops.hopsworks.persistence.entity.project.pia.Pia</class>
+    <class>io.hops.hopsworks.persistence.entity.project.jobs.DefaultJobConfiguration</class>
+    <class>io.hops.hopsworks.persistence.entity.python.PythonEnvironment</class>
+    <class>io.hops.hopsworks.persistence.entity.python.PythonDep</class>
+    <class>io.hops.hopsworks.persistence.entity.python.AnacondaRepo</class>
+    <class>io.hops.hopsworks.persistence.entity.python.CondaCommands</class>
+    <class>io.hops.hopsworks.persistence.entity.remote.user.RemoteUser</class>
+    <class>io.hops.hopsworks.persistence.entity.remote.oauth.OauthClient</class>
+    <class>io.hops.hopsworks.persistence.entity.remote.oauth.OauthLoginState</class>
+    <class>io.hops.hopsworks.persistence.entity.rstudio.RStudioProject</class>
+    <class>io.hops.hopsworks.persistence.entity.rstudio.RStudioSettings</class>
+    <class>io.hops.hopsworks.persistence.entity.security.RemoteMaterialReferences</class>
+    <class>io.hops.hopsworks.persistence.entity.serving.Serving</class>
+    <class>io.hops.hopsworks.persistence.entity.tensorflow.TensorBoard</class>
+    <class>io.hops.hopsworks.persistence.entity.user.security.apiKey.ApiKey</class>
+    <class>io.hops.hopsworks.persistence.entity.user.security.apiKey.ApiKeyScope</class>
+    <class>io.hops.hopsworks.persistence.entity.user.security.UserGroup</class>
+    <class>io.hops.hopsworks.persistence.entity.user.BbcGroup</class>
+    <class>io.hops.hopsworks.persistence.entity.user.Users</class>
+    <class>io.hops.hopsworks.persistence.entity.user.cluster.ClusterCert</class>
+    <class>io.hops.hopsworks.persistence.entity.user.activity.Activity</class>
+    <class>io.hops.hopsworks.persistence.entity.user.security.audit.AccountAudit</class>
+    <class>io.hops.hopsworks.persistence.entity.user.security.audit.RolesAudit</class>
+    <class>io.hops.hopsworks.persistence.entity.user.security.audit.Userlogins</class>
+    <class>io.hops.hopsworks.persistence.entity.user.security.secrets.Secret</class>
+    <class>io.hops.hopsworks.persistence.entity.util.Variables</class>
+    <class>io.hops.hopsworks.persistence.entity.yarn.YarnContainersLog</class>
+    <class>io.hops.hopsworks.persistence.entity.alertmanager.AlertManagerConfigEntity</class>
+    <class>io.hops.hopsworks.persistence.entity.jobs.description.JobAlert</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.datavalidation.alert.FeatureGroupAlert</class>
+    <class>io.hops.hopsworks.persistence.entity.project.alert.ProjectServiceAlert</class>
+    <!-- Metastore -->
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.cached.hive.HiveTbls</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.cached.hive.HiveSds</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.cached.hive.HiveColumns</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.cached.hive.HiveCds</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.cached.hive.HiveKeyConstraints</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.cached.hive.HiveTableParams</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.cached.hive.HivePartitionKeys</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.cached.hive.HivePartitions</class>
+    <!-- Git -->
+    <class>io.hops.hopsworks.persistence.entity.git.GitOpExecution</class>
+    <class>io.hops.hopsworks.persistence.entity.git.GitRepository</class>
+    <class>io.hops.hopsworks.persistence.entity.git.GitCommit</class>
+    <class>io.hops.hopsworks.persistence.entity.git.GitRepositoryRemote</class>
+    <class>io.hops.hopsworks.persistence.entity.git.GitCommandConfigurationConverter</class>
+    <!-- Converters -->
+    <class>io.hops.hopsworks.persistence.entity.user.cluster.RegistrationStatusConverter</class>
+    <class>io.hops.hopsworks.persistence.entity.jobs.configuration.JobConfigurationConverter</class>
+    <class>io.hops.hopsworks.persistence.entity.jupyter.config.JupyterConfigurationConverter</class>
+    <class>io.hops.hopsworks.persistence.entity.jupyter.config.DockerResourcesConverter</class>
+    <class>io.hops.hopsworks.persistence.entity.featurestore.featuregroup.datavalidation.RuleAssertionsConverter</class>
+    <class>io.hops.hopsworks.persistence.entity.alertmanager.ConfigConverter</class>
+    <class>io.hops.hopsworks.persistence.entity.alertmanager.AlertReceiver</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <shared-cache-mode>NONE</shared-cache-mode>
+    <validation-mode>NONE</validation-mode>
+    <properties>
+      <property name="eclipselink.target-database" value="MYSQL"/>
+      <!--
+      <property name="eclipselink.profiler" value="PerformanceMonitor"/>
+      <property name="eclipselink.logging.level" value="FINE"/>
+      <property name="eclipselink.logging.level.sql" value="FINE"/>
+      <property name="eclipselink.logging.parameters" value="true"/>
+      <property name="eclipselink.logging.logger" value="ServerLogger"/>
+      -->
+    </properties>
+  </persistence-unit>
+</persistence>
